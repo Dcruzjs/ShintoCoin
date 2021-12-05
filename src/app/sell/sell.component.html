@@ -1,0 +1,12 @@
+<h3>Sell ShintoCoins</h3>
+<p>Current ShintoCoin Value: {{currentValue | currency}}</p>
+<p>Number of ShintoCoins Owned: {{ownedCoins | number}}</p>
+<form (ngSubmit)="sellCoins()">
+  <div class="mb-3">
+    <p>I want to sell : {{sell | number}}</p>
+    <input [(ngModel)]="sell" name="sell" type="text"> 
+    <button type="submit">Sell</button>
+    <p *ngIf="errorMsg.length > 0">{{errorMsg}}</p>
+  </div>
+
+</form>

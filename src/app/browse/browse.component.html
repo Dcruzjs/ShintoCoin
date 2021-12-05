@@ -1,0 +1,25 @@
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Action</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Value</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody *ngIf="transactions.length > 0; else noTransactions">
+    <tr *ngFor="let transaction of transactions">
+      <th scope="row">{{transaction.id}}</th>
+      <td>{{transaction.action}}</td>
+      <td>{{transaction.amount}}</td>
+      <td>{{transaction.value}}</td>
+      <td><a class="btn" routerLink="/transaction/{{transaction.id}}">Details</a></td>
+    </tr>
+    
+  </tbody>
+  <ng-template #noTransactions>
+    <tr><td>There are no transactions to show, let's buy some ShintoCoins <a routerLink="/buy">Buy!</a></td></tr>
+  </ng-template>
+</table>

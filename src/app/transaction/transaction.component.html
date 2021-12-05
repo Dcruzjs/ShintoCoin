@@ -1,0 +1,10 @@
+<h1>Ledger Transaction Details</h1>
+<p>Detailed view of a Transaction from the ledger.</p>
+
+<div *ngIf="transaction; else noTransaction">
+  Transaction #{{transaction[0].id | number}}
+  {{transaction[0].action}} - {{transaction[0].amount}} ShintoCoin
+</div>
+<ng-template #noTransaction>
+  No transaction to show
+</ng-template>
