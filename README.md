@@ -1,5 +1,9 @@
 # ShintoCoins
 
+Objectives:
+
+    Practice using Angular routing to navigate to different components
+    The service may hold data that can be accessed by the component
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
 ## Development server
